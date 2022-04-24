@@ -1,0 +1,41 @@
+start docker-compose 
+docker-compose -f docker-compose.yml up -d
+
+connect to kafka shell
+docker exec -it kafka /bin/sh
+
+all kafka scripts located 
+/opt/kafka_<version>/bin
+
+
+# create a kafka topic 
+./kafka-topics.sh --bootstrap-server localhost:9092 
+--topic first_topic --partitions 3 --create
+
+#kafka-console-producer
+./kafka-console-producer.sh --bootstrap-server local
+host:9092 --topic first_topic
+
+#Producer property
+./kafka-console-producer.sh --bootstrap-server local
+host:9092 --topic first_topic --producer-property acks=all
+
+#get the topic list 
+./kafka-topics.sh --bootstrap-server localhost:9092 
+--list
+
+#describe topic 
+./kafka-topics.sh --bootstrap-server localhost:9092 
+--describe --topic new
+#key value insert 
+./kafka-console-producer.sh --bootstrap-server local
+host:9092 --topic first_topic --property parse.key=true --property key.seperator
+=:
+
+#kafka consumer
+./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic first_to
+pic
+
+#view all of the data
+./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic first_to
+pic --from-beginning
