@@ -37,5 +37,4 @@ host:9092 --topic first_topic --property parse.key=true --property key.seperator
 pic
 
 #view all of the data
-./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic first_to
-pic --from-beginning
+./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic first_topic --from-beginning
