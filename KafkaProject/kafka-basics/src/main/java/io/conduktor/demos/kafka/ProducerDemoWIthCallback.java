@@ -58,6 +58,4 @@ public class ProducerDemoWIthCallback {
         //close producer
         producer.flush();
     }
-
-
 }
