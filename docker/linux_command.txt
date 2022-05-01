@@ -9,8 +9,7 @@ all kafka scripts located
 
 
 # create a kafka topic 
-./kafka-topics.sh --bootstrap-server localhost:9092 
---topic first_topic --partitions 3 --create
+./kafka-topics.sh --bootstrap-server localhost:9092 --topic first_topic --partitions 3 --create
 
 #kafka-console-producer
 ./kafka-console-producer.sh --bootstrap-server local
@@ -38,3 +37,10 @@ pic
 
 #view all of the data
 ./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic first_topic --from-beginning
+
+# set offset consumer group
+./kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group consumer-opensearch --reset-offsets --to-earliest --execute --all-topics
+
+# kafka connector hub
+https://www.confluent.io/hub/
+
