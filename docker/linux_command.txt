@@ -44,3 +44,26 @@ pic
 # kafka connector hub
 https://www.confluent.io/hub/
 
+# describe a topic 
+
+./kafka-topics.sh --bootstrap-server localhost:9092 
+--topic configured-topic --describe
+
+# describe the configuration 
+
+./kafka-configs.sh --bootstrap-server localhost:9092 --entity-typ
+e topics --entity-name configured-topic --describe
+
+# alter the config 
+./kafka-configs.sh --bootstrap-server localhost:9092 --entity-typ
+e topics --entity-name configured-topic --alter --add-config min.insync.replicas=2
+
+#delete-configuration
+./kafka-configs.sh --bootstrap-server localhost:9092 --entity-typ
+e topics --entity-name configured-topic --alter --delete-config min.insync.replicas
+
+# __consumer_offsets
+./kafka-topics.sh --bootstrap-server localhost:9092 --describe --
+topic __consumer_offsets
+
+
