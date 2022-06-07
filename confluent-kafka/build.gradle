@@ -2,8 +2,8 @@ plugins {
 	id 'org.springframework.boot' version '2.6.7'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
-	id 'idea'
-	id "com.commercehub.gradle.plugin.avro" version "0.99.99"
+	//id 'idea'
+	//id "com.commercehub.gradle.plugin.avro" version "0.99.99"
 }
 
 group = 'io.confluent.developer'
@@ -34,7 +34,7 @@ dependencies {
 	//to genarate demo messages in to kafka
 	implementation 'com.github.javafaker:javafaker:1.0.2'
 	//avro
-	implementation 'io.confluent:kafka-avro-serializer:6.1.0'
+	//implementation 'io.confluent:kafka-avro-serializer:6.1.0'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'

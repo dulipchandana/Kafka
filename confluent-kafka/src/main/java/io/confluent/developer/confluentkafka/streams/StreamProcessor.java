@@ -14,8 +14,8 @@ import java.util.Locale;
 /**
  * https://docs.confluent.io/platform/current/streams/javadocs/javadoc/org/apache/kafka/streams/StreamsBuilder.html?utm_source=youtube&utm_medium=video&utm_campaign=tm.devx_ch.cd-spring-framework-and-apache-kafka_content.frameworks
  */
-@Component
-@EnableKafkaStreams
+//@Component
+//@EnableKafkaStreams
 public class StreamProcessor {
 
     @Autowired
